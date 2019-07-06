@@ -1,0 +1,116 @@
+			body{
+				padding:0;
+				margin:0;
+				overflow-x: hidden;
+				font-family: 'Montserrat', sans-serif;
+				background-color: whitesmoke;
+			}
+			h1,h2,h3,h4,h5 {
+				font-family: 'Merriweather', serif;
+			}
+			li {
+				list-style-type: none;
+			}
+			li a {
+				color:#000;
+			}
+			li a:hover {
+				color:limegreen;
+				text-decoration: none;
+			}
+			hr {
+			border-style: none;
+			border-bottom-style: solid;
+			border-width: 3px;
+			border-color: limegreen;
+			width: 10%;
+		}
+			.activecust {
+				background-color: #f75c03;
+		}
+			.container-fluid {
+			padding-right:0;
+			padding-left:0;
+			margin-right:0;
+			margin-left:0;
+		}
+			.container {
+		    padding-right:0;
+		    padding-left:0;
+		    margin-right:auto;
+		    margin-left:auto
+		 }
+		 	.logo {
+			font-family: 'Merriweather', serif;
+			color: limegreen;
+			}
+			.services {
+				margin: 50px 0;
+				text-align: center;
+			}
+			.categories h2 {
+				text-align: center;
+				margin: 30px 0 0 0;
+			}
+			.categories_list{
+				margin-top: 30px;
+			}
+			.cta {
+				min-height: 200px;
+				background-color: salmon;
+				text-align: center;
+				padding-top: 10px;
+				color: #f5f7dc;
+			}
+			.how_it_works {
+				text-align: center;
+				margin: 80px;
+			}
+			.footer{
+				min-height: 500px;
+				background-color: #3b413c;
+				margin-top: 100px;
+				color: white;
+			}
+			.footer_content{
+				margin-top: 80px;
+			}
+			.how_it_works h2,h3 {
+				margin:10px 0 20px 0;
+			}
+			 
+			.footer_list li a{
+				color: whitesmoke;
+				text-decoration: none;
+			}
+			/*styling for profile page*/
+			.profile {
+				border: 1px solid #fff;
+				margin: 30px 0;
+				background-color: #fff;
+			}
+			.profile-nav {
+				background-color: darkgrey;
+				min-height: 50px;
+			}
+			.profile_edit:hover {
+				background-color: grey;
+				cursor: default;
+			}
+			.card-header{
+				font-size: 22px;
+				font-weight: 500;
+			}
+			.card-text {
+				font-weight: 500;
+			}
+			.sub-container {
+				background-color: whitesmoke;
+				border-radius: 10px;
+			}
+			@media(min-width:320px) and (max-width: 768px) {
+				.mynav {
+					font-size: 11px;
+				}
+			}
+			
