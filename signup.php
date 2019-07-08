@@ -1,6 +1,6 @@
 
-		<!-- Navbar -->
-		<?php include('navbarjobs.php'); 
+		<?php
+		include('navbarjobs.php'); 
 				include('classes.php');			
 				$reg_error = array();
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -43,7 +43,8 @@
 					$userobj = new User;
 					$newuser = $userobj->register($fname,$lname,$phone,$email,$pswd,$gender);
 				}
-			} 
+
+			} 		
 
 
 		?>
@@ -128,28 +129,6 @@
 									<input type="checkbox" name="show" class="show">
 									<label for="show">Show password</label>
 								</div>
-								<fieldset class="form-group">
-									<div class="row">
-										<legend class="col-form-label col-sm-2 pt-0">I want to</legend>
-										<div class="col-sm-10">
-											<div class="form-check">
-												<input class="form-check-input" type="radio" name="acctype" id="gridRadios1" value="hire" checked>
-												<label class="form-check-label" for="gridRadios1">
-													Hire
-												</label>
-											</div>
-											<div class="form-check">
-												<input class="form-check-input" type="radio" name="acctype" id="gridRadios2" value="work">
-												<label class="form-check-label" for="gridRadios2">
-													Work
-												</label>
-												<small class="text-muted">
-												Don't worry, you can change this later.
-												</small>
-											</div>
-										</div>
-									</div>
-								</fieldset>
 								<fieldset class="form-group">
 									<div class="row">
 										<legend class="col-form-label col-sm-2 pt-0">Gender</legend>

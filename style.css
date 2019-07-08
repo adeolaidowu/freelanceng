@@ -66,6 +66,9 @@
 				text-align: center;
 				margin: 80px;
 			}
+			.edit1{
+				display:none;
+			}
 			.footer{
 				min-height: 500px;
 				background-color: #3b413c;
@@ -93,6 +96,9 @@
 				background-color: darkgrey;
 				min-height: 50px;
 			}
+			.profile-edit1{
+				display:none;
+			}
 			.profile_edit:hover {
 				background-color: grey;
 				cursor: default;
@@ -111,6 +117,9 @@
 			@media(min-width:320px) and (max-width: 768px) {
 				.mynav {
 					font-size: 11px;
+				}
+				.carousel-caption h1,h2{
+					font-size: 9px;
 				}
 			}
 			

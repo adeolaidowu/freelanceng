@@ -43,7 +43,6 @@
 						if(isset($user)){
 							echo $user;
 						}
-
 					 ?>
 						<h5 class="card-header">Sign in to FreelanceNG</h5>
 						<div class="card-body">

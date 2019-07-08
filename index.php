@@ -1,5 +1,6 @@
 
-		<?php include('navbar.php'); ?>
+		<?php include_once('navbar.php');
+		 ?>
 		<!-- Top Section -->
 		<div class="container-fluid" >
 			<div class="row">
@@ -9,24 +10,29 @@
 							
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="images/img7.jpg" class="d-block w-100" alt="...">
+									<img src="images/img7.jpg" class="d-block w-100" alt="carouselimage" style="height: 500px;">
 									
 									<div class="carousel-caption d-md-block h-75">
 										<h1 style="font-size: 3em; color:#f5f7dc;">Hire Freelancers</h1>
-										<h2 style="color:#f5f7dc;">Get your work done by talented freelancers</h2>
+										<h2 style="color:#f5f7dc; font-size: 1.2em;">Get your work done by talented freelancers</h2>
 									</div>
 								</div>
 								<div class="carousel-item">
-									<img src="images/img7.jpg" class="d-block w-100" alt="...">
+									<img src="images/img7.jpg" class="d-block w-100" alt="carouselimage" style="height: 500px;">
 									<div class="carousel-caption d-md-block h-75">
 										<h1 style="font-size: 3em; color:#f5f7dc;">Post your project for free</h1>
-										<h2 style="color:#f5f7dc;">Get the best talents to deliver for you</h2>
+										<h2 style="color:#f5f7dc; font-size: 1.2em;">Get the best talents to deliver for you</h2>
 									</div>
 								</div>
 							</div>
 
 						</div>
-						<input type="text" name="search-skills" class="form-control">
+						<div class="input-group mb-3 col-sm-6 mx-auto" style="position: relative; bottom:200px;z-index: 1;">
+						  <input type="text" class="form-control w-50 mx-auto" placeholder="Search Jobs" aria-label="" aria-describedby="indexsearch" id="indexform" name="indexform">
+						  <div class="input-group-append">
+						    <button class="btn btn-success" type="submit" id="indexsearch">Search</button>
+						  </div>
+						</div>
 					</div>
 				</div>
 			</div>

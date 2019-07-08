@@ -1,34 +1,44 @@
-<?php 
-include_once('navbar.php'); ?>
-
+<?php include_once('navbarprof.php'); ?>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
+			<a class="navbar-brand offset-1 mynav" href="#">MY PROFILE</a>
+			<div class="navbar-nav">
+				<a class="nav-item nav-link" href="profile.php">Back to profile</a>
+				<a class="nav-item nav-link" href="#">Messages</a>
+				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
+			</div>
+		</nav>	
 		<!-- Joblists column -->
 		<div class="container">
 			<div class="row">
 				<div class="col" style="text-align: center;">
-					<h3>View All Listed Jobs</h3>
+					<h3>View All Posted Jobs</h3>
 					<hr>
+					<?php if(isset($_GET['msg'])){echo $_GET['msg'];} ?>
 				</div>
 			</div>
 		</div>
 		<div class="container cont mt-2">
 			<div class="row">
 				<!-- searchbar for jobs -->
-				<div class="col-md-8 offset-1 mt-4">
+				<div class="col-8 offset-1 mt-4">
 					<form name="jobsearch" method="GET" action="#">
 						<label class="sr-only" for="inlineFormInputGroup">Find jobs</label>
 						<div class="input-group mb-2">
 							<div class="input-group-prepend">
 								<div class="input-group-text"><i class="fa fa-search"></i></div>
 							</div>
-							<input type="text" class="form-control shadow-none" id="findjobsindx" placeholder="find jobs" name="findjobsindx">
-						<button type="submit" class="btn btn-outline-success ml-1">Submit</button>
+							<input type="text" class="form-control shadow-none" id="findmyjobs" placeholder="find jobs" name="findmyjobs">
 						</div>
-					</form>
+					
 				</div>
+				<div class="col mt-4">
+					<button type="submit" class="btn btn-outline-success mr-1">Submit</button>
+				</div>
+				</form>
 			</div>
 			<form>
 				<div class="row form-group mb-4">
-					<div class="col-md ml-2">
+					<div class="col ml-2">
 						<label>Budget</label>
 						<select class="form-control" id="budget" name="budget">
 							<option value="">Select an option</option>
@@ -41,7 +51,7 @@ include_once('navbar.php'); ?>
 							<option value="N1,000,000+">major-project (N1,000,000+)</option>
 						</select>
 					</div>
-					<div class="col-md ml-2">
+					<div class="col mr-2">
 						<label>Project Length</label>
 						<select class="form-control" id="projectdelivery" name="projectdelivery">
 							<option value="">Select an option</option>
@@ -56,7 +66,7 @@ include_once('navbar.php'); ?>
 				</div>
 			</form>
 			<div class="row">
-				<div class="col-md" id="indexjob">
+				<div class="col" id="mypostedjobs">
 					
 				</div>
 			</div>
