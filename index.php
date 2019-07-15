@@ -1,5 +1,7 @@
 
-		<?php include_once('navbar.php');
+		<?php 
+		$pagetitle = "FreelanceNG";
+		include_once('navbar.php');
 		 ?>
 		<!-- Top Section -->
 		<div class="container-fluid" >
@@ -30,7 +32,7 @@
 						<div class="input-group mb-3 col-sm-6 mx-auto" style="position: relative; bottom:200px;z-index: 1;">
 						  <input type="text" class="form-control w-50 mx-auto" placeholder="Search Jobs" aria-label="" aria-describedby="indexsearch" id="indexform" name="indexform">
 						  <div class="input-group-append">
-						    <button class="btn btn-success" type="submit" id="indexsearch">Search</button>
+						    <a class="btn btn-success" type="submit" href="indexjobs.php">Search</a>
 						  </div>
 						</div>
 					</div>
@@ -39,30 +41,30 @@
 			
 		</div>
 		<!-- How it works -->
-		<section class="how_it_works">
+		<section class="how_it_works" style="margin-top: -10px;">
 			<div class="container">
 				
 				<div class="row">
-					<div class="col">
-						<h2>How it works</h2>
+					<div class="col mb-3">
+						<h2 style="font-size:2rem;" id="how_it_works">How it works</h2>
 						<hr>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md">
 						<i class="fas fa-tasks" style="font-size: 5em;color:#498467;"></i>
 						<h3>Post a job</h3>
-						<p>Tell us about your project. You'll begin to receive bids from freelancers around the country. You can also search for and hire specific freelancers</p>
+						<p>Tell us about your project. You'll begin to receive bids from freelancers around the country within a few minutes of posting.You can also choose to apply to Jobs and work as a freelancer</p>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<i class="fas fa-users" style="font-size: 5em;color:#498467;"></i>
 						<h3>Hire a freelancer</h3>
-						<p>Receive bids from freelancers. Browse freelancer profiles for more information. Compare bids, get freelancer contact details to hash out specific project details. Hire freelancer</p>
+						<p>Receive bids from freelancers. Compare bids, get freelancer contact details to hash out specific project details. Hire freelancer</p>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<i class="fas fa-money-bill-alt" style="font-size: 5em;color:#498467;"></i>
 						<h3>Payment</h3>
-						<p>Only pay when you are 100% satisfied with the job. Payments are made easy with our secure payment partner</p>
+						<p>Only pay when you are 100% satisfied with the job. Payments are made outside the platform and is based on the amount the freelancer quotes in his bid proposal</p>
 					</div>
 				</div>
 			</div>
@@ -78,13 +80,13 @@
 			<section class="services">
 				<div class="row">
 					<div class="col">
-						<h2>COLLECTIONS</h2>
+						<h2 style="font-size:2rem;">COLLECTIONS</h2>
 						<hr>
 						<p>Choose from our services</p>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col">
+				<div class="row" style="text-align: center;">
+					<div class="col-md">
 						<div class="card" style="width: 18rem;">
 							<img src="images/pet.jpg" class="card-img-top" alt="cat_pic">
 							<div class="card-body">
@@ -93,7 +95,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<div class="card" style="width: 18rem;">
 							<img src="images/game.jpg" class="card-img-top" alt="game_dev">
 							<div class="card-body">
@@ -102,7 +104,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col">
+					<div class="col-md">
 						<div class="card" style="width: 18rem;">
 							<img src="images/logo.jpg" class="card-img-top" alt="logo_design">
 							<div class="card-body">
@@ -116,12 +118,12 @@
 			<section class="categories">
 				<div class="row">
 					<div class="col">
-						<h2>Browse Top Job Categories</h2>
+						<h2 style="font-size:2rem;">Browse Top Job Categories</h2>
 						<hr>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col categories_list">
+					<div class="col-md col-sm-6 categories_list">
 						<ul>
 							<li><a href="#">HTML</a></li>
 							<li><a href="#">CSS</a></li>
@@ -135,7 +137,7 @@
 							<li><a href="#">NoSQL</a></li>
 						</ul>
 					</div>
-					<div class="col categories_list">
+					<div class="col-md col-sm-6 categories_list">
 						<ul>
 							<li><a href="#">Jquery</a></li>
 							<li><a href="#">React Native</a></li>
@@ -149,7 +151,7 @@
 							<li><a href="#">Node.js</a></li>
 						</ul>
 					</div>
-					<div class="col categories_list">
+					<div class="col-md col-sm-6 categories_list">
 						<ul>
 							<li><a href="#">C++ Programming</a></li>
 							<li><a href="#">HTML5</a></li>
@@ -163,7 +165,7 @@
 							<li><a href="#">Blockchain</a></li>
 						</ul>
 					</div>
-					<div class="col categories_list">
+					<div class="col-md col-sm-6 categories_list">
 						<ul>
 							<li><a href="#">Wordpress</a></li>
 							<li><a href="#">Banner Design</a></li>
@@ -174,7 +176,7 @@
 							<li><a href="#">Iphone Apps</a></li>
 							<li><a href="#">Angular.js</a></li>
 							<li><a href="#">NumPy</a></li>
-							<li><a href="#">See all >></a></li>
+							<li><a href="#">R</a></li>
 						</ul>
 					</div>
 				</div>
@@ -182,11 +184,3 @@
 		</div>
 		<!-- footer -->
 		<?php include('footer.php'); ?>
-		<!-- jquery -->
-		<script type="text/javascript" src="bootstrap/js/jquery-3.4.0.js"></script>
-		<!-- popper -->
-		<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-		<!-- Bootstrap JS>-->
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	</body>
-</html>

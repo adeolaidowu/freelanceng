@@ -9,7 +9,6 @@ $mybid = $jobobj->getSpecificJobApplication($_SESSION['userid'],$_GET['jobid']);
 			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="sentbids.php">Back</a>
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>
@@ -27,13 +26,6 @@ $mybid = $jobobj->getSpecificJobApplication($_SESSION['userid'],$_GET['jobid']);
 					<p>@ <?php echo $userdetails['firstName']; ?></p>
 					<p><i class="fas fa-envelope mr-2" title="email verification"></i> <i class="fas fa-phone" title="phone verification"></i></p>
 					<p>member since <span><?php if(isset($userdetails['date_registered'])){echo date('jS, F Y', strtotime($userdetails['date_registered']));}?></span></p>
-					<p>0 recommendations</p>
-					<div>
-						<a href="receivedbids.php">Received Bids</a>
-					</div>
-					<div>
-						<a href="sentbids.php">Sent Bids</a>
-					</div>
 				</div>
 				<div class="col-md">
 					<div class="card">

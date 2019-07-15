@@ -1,6 +1,8 @@
 
 		
-		<?php include('navbarjobs.php');
+		<?php 
+		$pagetitle = "Login";
+		include('navbar.php');
 			include('classes.php');
 			$login_err = array();
 		// check for server request method
@@ -98,12 +100,6 @@
 		</div>
 		<!-- footer -->
 		<?php include('footer.php'); ?>
-		<!-- jquery -->
-		<script type="text/javascript" src="bootstrap/js/jquery-3.4.0.js"></script>
-		<!-- popper -->
-		<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-		<!-- Bootstrap JS>-->
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 		<!-- <script type="text/javascript">
 			$(document).ready(function(){
 				$('form').submit(function(f) {
@@ -117,5 +113,3 @@
 				});
 			});
 		</script> -->
-	</body>
-</html>

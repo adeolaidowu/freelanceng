@@ -3,7 +3,6 @@
 			<a class="navbar-brand offset-1 mynav" href="#">MY PROFILE</a>
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="profile.php">Back to profile</a>
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>	

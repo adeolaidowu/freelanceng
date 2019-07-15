@@ -88,7 +88,6 @@
 							<option value="mobiletrans">Mobile Transfer</option>
 							<option value="wiretrans">Wire Transfer</option>
 							<option value="directdep">Direct deposit</option>
-							<option value="paymntpart">Our secure payment partner</option>
 						</select>
 					</div>
 				</div>

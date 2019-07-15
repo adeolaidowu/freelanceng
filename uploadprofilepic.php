@@ -16,7 +16,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="myjobs.php">My Projects</a>
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>	

@@ -7,19 +7,19 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col footer_list">
+					<div class="col-sm footer_list">
 						<ul>
 							<li>Freelance<span class="logo">NG</span></li>
 							<li><a href="#">Categories</a></li>
 							<li><a href="#">Projects</a></li>
 							<li><a href="#">Freelancers</a></li>
-							<li><a href="#">Local Jobs</a></li>
+							<li><a href="indexjobs.php">Local Jobs</a></li>
 						</ul>
 					</div>
-					<div class="col footer_list">
+					<div class="col-sm footer_list">
 						<ul>
 							<li>About</li>
-							<li><a href="#">How it works</a></li>
+							<li><a href="#how_it_works">How it works</a></li>
 							<li><a href="#">Security</a></li>
 							<li><a href="#">Terms of service</a></li>
 							<li><a href="#">Privacy policy</a></li>
@@ -27,7 +27,7 @@
 							<li><a href="#">Fees and charges</a></li>
 						</ul>
 					</div>
-					<div class="col footer_list">
+					<div class="col-sm footer_list">
 						<ul>
 							<li>Browse</li>
 							<li><a href="#">Freelancer by skill</a></li>
@@ -37,7 +37,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="col">
+					<div class="col-md">
 						<p style="border-bottom: 1px solid white;"></p>
 						<span style="color: white; margin-right: 30px;">Follow us</span>
 						<i class="fab fa-facebook" style="font-size: 1.5em;"></i>

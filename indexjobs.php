@@ -1,4 +1,5 @@
 <?php 
+$pagetitle = 'Jobs';
 include_once('navbar.php'); ?>
 
 		<!-- Joblists column -->

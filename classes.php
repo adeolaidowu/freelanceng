@@ -561,7 +561,7 @@ class Job{
 		if($this->dbobj->dbcon->affected_rows > 0){
 			$row = $result->fetch_all(MYSQLI_ASSOC);
 		}else{
-			$row = "<div class='alert alert-danger'>You have not applied to any jobs</div>";
+			$row = [];
 		}
 		return $row;
 
@@ -570,13 +570,13 @@ class Job{
 	public function receivedBids($userid){
 		$sql = "SELECT bid.*,firstName,lastName,photograph FROM bid LEFT JOIN user ON freelancerId=userId WHERE employerId = '$userid' ORDER BY bid_date DESC";
 		//run/execute the query
+		$row = [];
 		$result = $this->dbobj->dbcon->query($sql);
 		//fetch all rows
-		$row = [];
 		if($this->dbobj->dbcon->affected_rows > 0){
 			$row = $result->fetch_all(MYSQLI_ASSOC);
 		}else{
-			$row = "<div alert alert-danger>You have not applied to any jobs</div>";
+			$row = [];
 		}
 		return $row;
 

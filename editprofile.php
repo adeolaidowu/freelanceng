@@ -3,17 +3,16 @@
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
 				$headline = User::sanitize($_POST['headline']);
 				$summary = User::sanitize($_POST['summary']);
+				$profid = User::sanitize($_POST['profid']);
 				$userobj = new User;
-				$userprofile = $userobj->editProfile($headline,$summary,$_SESSION['userid'],$_SESSION['profileid']);
+				$userprofile = $userobj->editProfile($headline,$summary,$_SESSION['userid'],$profid);
 				
 			}
 		?>
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
-			<a class="navbar-brand offset-1 mynav" href="#">MY PROFILE</a>
+			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
-				<a class="nav-item nav-link active mr-4" href="#">Improve Profile <span class="sr-only">(current)</span></a>
 				<a class="nav-item nav-link" href="myjobs.php">My Projects</a>
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>	
@@ -23,7 +22,6 @@
 				<?php 
 					$profileobj = new User;
 					$userdetails = $profileobj->getUserDetails($_SESSION['userid']);
-					var_dump($_SESSION);
 				 ?>
 				<?php if(isset($userprofile)){echo $userprofile;} ?>
 				<div class="row">
@@ -45,14 +43,22 @@
 						<p>0 recommendations</p>
 					</div>
 					<div class="col-md-6 offset-1">
+						<?php 
+							$profobj = new User;
+							$prof = $profobj->getProfileDetails($_SESSION['userid']);
+							//var_dump($prof);
+
+
+						 ?>
 						<div class="edit">
 							<h5 class="profile_edit">Professional Headline <i class="fas fa-pencil-alt" style="font-size: 16px;"></i></h5>
 						<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="prof_details">
-							<textarea placeholder="Enter your professional Headline" cols="50" rows="4" name="headline"><?php if(isset($_SESSION['headline'])){echo $_SESSION['headline'];} ?></textarea> <br>
+							<textarea placeholder="Enter your professional Headline" cols="50" rows="4" name="headline"><?php if(isset($prof['headline'])){echo $prof['headline'];} ?></textarea> <br>
 						
 						<h5 class="profile_edit">Profile summary <i class="fas fa-pencil-alt" style="font-size: 16px;"></i></h5>
 						
-							<textarea placeholder="Enter your profile summary" cols="50" rows="4" name="summary"><?php if(isset($_SESSION['summary'])){echo $_SESSION['summary'];} ?></textarea> <br>
+							<textarea placeholder="Enter your profile summary" cols="50" rows="4" name="summary"><?php if(isset($prof['summary'])){echo $prof['summary'];} ?></textarea> <br>
+							<input type="hidden" name="profid" value="<?php echo $prof['profile_id']; ?>">
 							<button class="btn btn-sm btn-success" id="editprof">Save Changes</button>
 						</form>
 						</div>

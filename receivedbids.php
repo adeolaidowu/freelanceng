@@ -4,13 +4,12 @@ include_once('classes.php');
 $jobobj = new Job;
 $mybid = $jobobj->receivedBids($_SESSION['userid']);
 // var_dump($_SESSION['userid']);
-// var_dump($mybid);
+ //var_dump($mybid);
 	
  ?>
  <nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
 			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>
@@ -38,7 +37,10 @@ $mybid = $jobobj->receivedBids($_SESSION['userid']);
 							<th>Application Date</th>
 						</thead>
 						<tbody>
-					<?php 
+					<?php
+					if(count($mybid) == 0){
+						echo "<tr><td colspan ='9'>You have not applied to any jobs<td></tr>";
+					}else{
 					$serial=1;
 					foreach ($mybid as $key => $value){ 
 					?>
@@ -51,9 +53,9 @@ $mybid = $jobobj->receivedBids($_SESSION['userid']);
 								<td>&#8358;<?php echo number_format($value['fee'],2); ?></td>
 								<td><?php echo $value['deliveryTime']; ?></td>
 								<td></td>
-								<td><?php echo date('jS,F Y',strtotime($value['bid_date'])); ?><br><a href="biddetails.php?appid=<?php echo $value['freelancerId']; ?>&jobid=<?php echo $value['jobId']; ?>">View More</a></td>
+								<td><?php echo date('jS,F Y',strtotime($value['bid_date'])); ?><br><a href="biddetails.php?appid=<?php echo $value['freelancerId']; ?>&jobid=<?php echo $value['jobId']; ?>" style="color:antiquewhite;">View More</a></td>
 							</tr>
-					<?php $serial++;} ?>
+					<?php $serial++;}} ?>
 						</tbody>
 					</table>
 				</div>

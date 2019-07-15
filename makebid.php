@@ -39,7 +39,6 @@
 		<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
 			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>

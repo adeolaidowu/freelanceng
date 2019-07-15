@@ -1,6 +1,7 @@
 
 		<?php
-		include('navbarjobs.php'); 
+		$pagetitle = "Sign up";
+		include('navbar.php'); 
 				include('classes.php');			
 				$reg_error = array();
 			if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -131,10 +132,10 @@
 								</div>
 								<fieldset class="form-group">
 									<div class="row">
-										<legend class="col-form-label col-sm-2 pt-0">Gender</legend>
-										<div class="col-sm-10">
+										<legend class="col-form-label col-sm-3 pt-0">Gender</legend>
+										<div class="col-sm-9">
 											<div class="form-check">
-												<input class="form-check-input" type="radio" name="gender"  value="male" <?php if(isset($_POST['gender']) && $_POST['gender'] == 'male'){echo "checked";} ?>>
+												<input class="form-check-input" type="radio" name="gender"  value="male" checked <?php if(isset($_POST['gender']) && $_POST['gender'] == 'male'){echo "checked";} ?>>
 												<label class="form-check-label" for="male">
 													Male
 												</label>
@@ -178,12 +179,6 @@
 
 		<!--footer-->
 		<?php include('footer.php'); ?>
-		<!-- jquery -->
-		<script type="text/javascript" src="bootstrap/js/jquery-3.4.0.js"></script>
-		<!-- popper -->
-		<script type="text/javascript" src="bootstrap/js/popper.min.js"></script>
-		<!-- Bootstrap JS>-->
-		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
 		<!-- <script type="text/javascript">
 			$(document).ready(function(){
 				// function to validate form input

@@ -10,12 +10,10 @@ $mybid = $jobobj->sentBids($_SESSION['userid']);
  <nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
 			<a class="navbar-brand offset-1 mynav" href="profile.php">MY PROFILE</a>
 			<div class="navbar-nav">
-				<a class="nav-item nav-link" href="jobpage.php">Back</a>
-				<a class="nav-item nav-link" href="#">Messages</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
 			</div>
 		</nav>
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row mt-5">
 				<div class="col-md">
 					<table class="table table-bordered table-dark">
@@ -32,6 +30,9 @@ $mybid = $jobobj->sentBids($_SESSION['userid']);
 						</thead>
 						<tbody>
 					<?php 
+					if(count($mybid) == 0){
+						echo"<tr><td colspan ='9'>You have not applied to any jobs<td></tr>";
+					}
 					$serial=1;
 					foreach ($mybid as $key => $value){ 
 					?>
