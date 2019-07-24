@@ -44,6 +44,18 @@
 			font-family: 'Merriweather', serif;
 			color: limegreen;
 			}
+			.carousel-caption{
+				color:#f5f7dc;
+			}
+			.carousel-caption h1{
+				font-size:3em;
+			}
+			.carousel-caption p{
+				font-size: 1.5em;
+			}
+			.carousel-img{
+				height: 500px;
+			}
 			.services {
 				margin: 50px 0;
 				text-align: center;
@@ -78,13 +90,15 @@
 			.footer_content{
 				margin-top: 80px;
 			}
-			.how_it_works h2,h3 {
-				margin:10px 0 20px 0;
-			}
-			 
 			.footer_list li a{
 				color: whitesmoke;
 				text-decoration: none;
+			}
+			.footer-mob{
+				display: none;
+			}
+			.how_it_works h2,h3 {
+				margin:10px 0 20px 0;
 			}
 			/*styling for profile page*/
 			.profile {
@@ -93,7 +107,6 @@
 				background-color: #fff;
 			}
 			.profile-nav {
-				background-color: darkgrey;
 				min-height: 50px;
 			}
 			.profile-edit1{
@@ -115,11 +128,84 @@
 				border-radius: 10px;
 			}
 			@media(min-width:320px) and (max-width: 768px) {
-				.mynav {
-					font-size: 11px;
-				}
 				.carousel-caption{
-					font-size: 9px;
+					font-size: 12px;
+				}
+				.carousel-img{
+					height: 350px;
+					margin-bottom: 25px;
+				}
+				.carousel-search{
+					display:none;
+				}
+				/*cta resp styling*/
+				.cta > p{
+					padding: 5px;
+				}
+				.cta > a{
+					margin-bottom: 10px;
+				}
+				/*services section resp styling*/
+				.services{
+					text-align: center;
+				}
+				.card{
+					margin:0 auto 10px auto;
+				}
+				/*categories section responsive styling*/
+				.categories{
+					text-align: center;
+				}
+				.bottom-cat{
+					display:none;
+				}
+				/*footer-section responsive styling*/
+				.footer{
+					min-height: 250px;
+				}
+				.footer-main{
+					display: none;
+				}
+				.footer-mob{
+					display: block;
+					text-align: center;
+					margin-top: 20px;
+				}
+				.footer-mob div{
+					margin:15px 0;
+					padding-top: 10px;
+				}
+				.footer-mob div a{
+					color: #fff;
+				}
+				/*Styling for inner webapp*/
+				.post-project{
+					padding: 0.25rem 0.5rem;
+				    font-size: 0.875rem;
+				    line-height: 1.5;
+				    border-radius: 0.2rem;
+				    margin-bottom: 15px;
+				}
+				.navbar-brand {
+					font-size: 16px;
+				}
+				.filter{
+					padding: 0 45px ;
+				}
+				.manage-bids{
+					font-size: 20px;
+				}
+				.welcome > h2{
+					font-size: 26px;
+				}
+				.welcome > h4{
+					font-size: 20px;
+				}
+				.job-detail-heading{
+					font-size: 28px;
+				}
+				.submit-search{
+					display:none;
 				}
 			}
 			
