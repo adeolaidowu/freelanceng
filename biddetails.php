@@ -13,16 +13,11 @@
 	$mybid = $jobobj->receivedBids2($_GET['appid'],$_GET['jobid']);
 	//var_dump($mybid);
  ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand offset-1" href="#">Job description</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-			<a class="nav-item nav-link mr-4" href="profile.php">Profile <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="receivedbids.php">Back</a>
-		</div>
+ <nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow p-3 mb-5 bg-dark">
+	<a class="navbar-brand offset-1" href="profile.php">Job description</a>
+	<div class="navbar-nav">
+		<a class="nav-item nav-link mr-4" href="profile.php">Profile <span class="sr-only">(current)</span></a>
+		<a class="nav-item nav-link" href="receivedbids.php">Back</a>
 	</div>
 </nav>
 <?php 
@@ -43,7 +38,7 @@
     	<input type="hidden" name="status" value="Accepted">
     	<input type="hidden" name="appid" value="<?php echo $_GET['appid'] ?>">
     	<input type="hidden" name="jobid" value="<?php echo $_GET['jobid'] ?>">
-		<button class="btn btn-success" name="accept">Accept Bid</button>
+		<button class="btn btn-success" name="accept_bid">Accept Bid</button>
     </form>
   </div>
 </div>

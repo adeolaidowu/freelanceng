@@ -1,6 +1,13 @@
 <?php 
 $pagetitle = 'Jobs';
-include_once('navbar.php'); ?>
+include_once('navbar.php');
+include_once('classes.php');
+if(isset($_GET['keyword'])){
+$jobobj = new Job;
+$jobs = $jobobj->getCatJob($_GET['keyword']);
+var_dump($jobs);
+}
+ ?>
 
 		<!-- Joblists column -->
 		<div class="container">
@@ -75,4 +82,4 @@ include_once('navbar.php'); ?>
 		<!-- footer -->
 		<?php include('footer.php'); ?>
 		
-		
+		}

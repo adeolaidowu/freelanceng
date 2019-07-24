@@ -3,16 +3,11 @@
 	$jobobj = new Job;
 	$jobs = $jobobj->getJobDetails($_GET['id']);
  ?>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<a class="navbar-brand offset-1" href="#">Job description</a>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-	<span class="navbar-toggler-icon"></span>
-	</button>
-	<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		<div class="navbar-nav">
-			<a class="nav-item nav-link mr-4" href="profile.php">Profile <span class="sr-only">(current)</span></a>
-			<a class="nav-item nav-link" href="joblistings.php">Back</a>
-		</div>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
+	<a class="navbar-brand offset-1 mynav" href="profile.php">Job description</a>
+	<div class="navbar-nav">
+		<a class="nav-item nav-link" href="profile.php">Profile</a>
+		<a class="nav-item nav-link" href="joblistings.php">Back</a>
 	</div>
 </nav>
 <div class="card">

@@ -30,17 +30,18 @@ include_once('navbarprof.php'); ?>
 								<div class="input-group-text"><i class="fa fa-search"></i></div>
 							</div>
 							<input type="text" class="form-control shadow-none" id="findjobs" placeholder="find jobs" name="findjobs">
+							<button type="submit" class="btn btn-outline-success ml-2 submit-search">Submit</button>
 						</div>
 					
 				</div>
 				<div class="col mt-4">
-					<button type="submit" class="btn btn-outline-success mr-1">Submit</button>
+					
 				</div>
 				</form>
 			</div>
 			<form>
 				<div class="row form-group mb-4">
-					<div class="col ml-2">
+					<div class="col-md filter">
 						<label>Budget</label>
 						<select class="form-control" id="budget" name="budget">
 							<option value="">Select an option</option>
@@ -53,7 +54,7 @@ include_once('navbarprof.php'); ?>
 							<option value="N1,000,000+">major-project (N1,000,000+)</option>
 						</select>
 					</div>
-					<div class="col">
+					<div class="col-md filter">
 						<label>Project Length</label>
 						<select class="form-control" id="projectdelivery" name="projectdelivery">
 							<option value="">Select an option</option>
@@ -65,7 +66,7 @@ include_once('navbarprof.php'); ?>
 							<option value="negotiatiable">To be negotiated</option>
 						</select>
 					</div>
-					<div class="col mr-2">
+					<div class="col-md filter">
 						<label>Category</label>
 						<select class="form-control" id="category" name="category">
 							<option value="">Select an option</option>

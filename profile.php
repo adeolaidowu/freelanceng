@@ -7,8 +7,8 @@
 			//var_dump($user);
 			//var_dump($_SESSION);
 		?> 
-		<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5 bg-dark mynav">
-			<a class="navbar-brand offset-1 mynav" href="#">MY PROFILE</a>
+		<nav class="navbar navbar-expand-sm navbar-dark bg-dark profile-nav shadow p-3 mb-5">
+			<a class="navbar-brand offset-1" href="#">MY PROFILE</a>
 			<div class="navbar-nav">
 				<a class="nav-item nav-link" href="myjobs.php">My Projects</a>
 				<a class="nav-item nav-link" href="joblistings.php">All Jobs</a>
@@ -44,7 +44,7 @@
 							<a href="sentbids.php" class="btn btn-outline-success mb-3">Sent Bids</a>
 						</div>
 					</div>
-					<div class="col-md-6 offset-1">
+					<div class="col-md-6 offset-1 welcome">
 						<?php 
 							if(isset($_SESSION['profilepic'])){
 						 ?>

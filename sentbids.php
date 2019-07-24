@@ -16,7 +16,7 @@ $mybid = $jobobj->sentBids($_SESSION['userid']);
 		<div class="container-fluid">
 			<div class="row mt-5">
 				<div class="col-md">
-					<table class="table table-bordered table-dark">
+					<table class="table table-bordered table-default table-striped">
 						<thead>
 							<th>S/N</th>
 							<th>Job Name</th>

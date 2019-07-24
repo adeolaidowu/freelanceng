@@ -1,6 +1,6 @@
 <!-- footer -->
 		<section class="footer">
-			<div class="container">
+			<div class="container footer-main">
 				<div class="row">
 					<div class="col footer_content">
 						<p style="border-bottom: 1px solid white;"></p>
@@ -48,6 +48,12 @@
 					</div>
 				</div>
 			</div>
+			<div class="footer-mob">
+				<div><a href="">About Us</a></div>
+				<div><a href="">How It Works</a></div>
+				<div><a href="">Terms of Service</a></div>
+				<div><a href="">Local Jobs</a></div>
+			</div>
 			<div class="row">
 				<div class="col d-flex justify-content-center">
 					<p style="font-size: 14px;">&copy; <?php echo date('Y'); ?> FreelanceNG All rights reserved</p>
@@ -77,26 +83,12 @@
 				$('#freelance').click(function(){
 					$('.msg').html('You should edit and update your profile for full benefits of the freelancer account');
 				});
-				// $('#post').click(function(){
-				// 	var projectname = $('#projectname').val();
-				// 	var projectdetails = $('#projectdetails').val();
-				// 	var reqskills = $('#reqskills').val();
-				// 	var timeofdelivery = $('#projectdelivery').val();
-				// 	var budget = $('#budget').val();
-				// 	var paymentmethod = $('#paymentmethod').val();
-				// $.ajax({
-				// 	type: "POST",
-				// 	url: "displayjob.php",
-				// 	data: "projectname=" + projectname + "&details=" + projectdetails + "&skills=" + reqskills + "&deliverytime=" + timeofdelivery + "&budget=" + budget + "&paymentmethod=" + paymentmethod
-				// 	});
-				// });
 				//to enable the page get the information from displayjob.php and display it inside myjob id
 				$.ajax({
 					type: "GET",
 					url: "displayjob.php",
 					data: "",
 					success: function(response){
-						console.log(response);
 						$('#myjob').html(response);
 						}
 					});
@@ -106,13 +98,12 @@
 					url: "dispindexjob.php",
 					data: "",
 					success: function(response){
-						console.log(response);
 						$('#indexjob').html(response);
 						}
 					});//display jobs when we choose/change budget(outside the app/without signing in)
 				$('#budget').change(function(){
 					var budget = $(this).val();
-					//send the parameters to displaydevpro.php using $.ajax method
+					//send the parameters to dispindexjob.php using $.ajax method
 					$.ajax({
 						type: "POST",
 						url: "dispindexjob.php",
@@ -125,7 +116,7 @@
 				//display jobs with respect to delivery time outside the app/without signing in
 				$('#projectdelivery').change(function(){
 					var deliverytime = $(this).val();
-					//send the parameters to displaydevpro.php using $.ajax method
+					//send the parameters to dispindexjob.php using $.ajax method
 					$.ajax({
 						type: "POST",
 						url: "dispindexjob.php",
@@ -141,17 +132,10 @@
 					//declare variable(s) to be sent from this page
 					//alert('keyup working');
 					var keyword = $(this).val();
-					// send the variable/paramenter to another page(search.php) for async using jquery load
+					// send the variable/paramenter to another page(search3.php) for async using jquery load
 					$('#indexjob').load('search3.php',{keyword: keyword});
 				});
-				//search for jobs from index page
-				$('#indexsearch').click(function(){
-					//declare variable(s) to be sent from this page
-					//alert('keyup working');
-					var keyword = $('#indexform').val();
-					// send the variable/paramenter to another page(search.php) for async using jquery load
-					$('#indexjob').load('search4.php',{keyword: keyword});
-				});
+				
 				//display jobs when we choose/change budget
 				$('#budget').change(function(){
 					var budget = $(this).val();
@@ -168,7 +152,7 @@
 				//display jobs with respect to delivery time chosen by user
 				$('#projectdelivery').change(function(){
 					var deliverytime = $(this).val();
-					//send the parameters to displaydevpro.php using $.ajax method
+					//send the parameters to displayjob.php using $.ajax method
 					$.ajax({
 						type: "POST",
 						url: "displayjob.php",
@@ -181,7 +165,7 @@
 				//display jobs when we choose/change budget inside myjobs
 				$('#budget').change(function(){
 					var budget = $(this).val();
-					//send the parameters to displaydevpro.php using $.ajax method
+					//send the parameters to displaymyjob.php using $.ajax method
 					$.ajax({
 						type: "POST",
 						url: "displaymyjob.php",
@@ -194,7 +178,7 @@
 				//display jobs with respect to delivery time chosen by specific user to filter through their posted jobs
 				$('#projectdelivery').change(function(){
 					var deliverytime = $(this).val();
-					//send the parameters to displaydevpro.php using $.ajax method
+					//send the parameters to displaymyjob.php using $.ajax method
 					$.ajax({
 						type: "POST",
 						url: "displaymyjob.php",
@@ -224,7 +208,6 @@
 					url: "displaymyjob.php",
 					data: "",
 					success: function(response){
-						console.log(response);
 						$('#mypostedjobs').html(response);
 						}
 					});
@@ -234,13 +217,23 @@
 					url: "gettotaljobs.php",
 					data: "",
 					success: function(response){
-						console.log(response);
 						$('#totaljobs').html(response);
 						}
 					});
 				//script to make intro hide when profile has been updated/edited
 				$('#editprof').click(function(){
 					$('.intro').hide();
+				});
+				$(".categories_link").click(function(){
+					var keyword = $(this).html();
+					$.ajax({
+						type: "POST",
+						url: "indexjobs.php",
+						data: "keyword=" + keyword,
+						success: function(response){
+							$('#indexjob').html(response);
+						}
+					});
 				});
 			});
 		</script>

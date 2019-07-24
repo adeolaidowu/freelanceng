@@ -11,10 +11,6 @@ if(isset($_POST['budget']) && isset($_POST['deliverytime'])){
 }elseif(isset($_POST['deliverytime'])){
 	$jobs = $jobobj->getJobIndex2($_POST['deliverytime']);
 	//var_dump($_POST);
-}elseif(isset($keyword)){
-$jobs = $jobobj->findJob($keyword);
-}else if(isset($keyword) && $keyword == ""){
-	$jobs = $jobobj->getIndexJob();
 }else{
 	$jobs = $jobobj->getIndexJob();
 }
@@ -27,7 +23,7 @@ if(isset($jobs)){
 	
   ?>
   <div class="list-group">
-	<a href="signup.php ?>" class="list-group-item list-group-item-action">
+	<a href="signup.php" class="list-group-item list-group-item-action">
   	<div class="d-flex w-100 justify-content-between">
 		<h4 class="mb-3"><?php echo $value['projectname']; ?></h4>
 		<small>Posted on <?php echo date('dS, F Y', strtotime($value['posted_at'])); ?></small>

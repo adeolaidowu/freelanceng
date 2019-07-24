@@ -3,10 +3,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	// echo "<pre>";
 	// print_r($_FILES['profilephoto']);
 	// echo "</pre>";
-	$profilepic = $_FILES['profilephoto'];
-	if($profilepic['name'] == ""){
+	if(isset($_FILES['profilephoto'])){
+		$profilepic = $_FILES['profilephoto'];
+		if($profilepic['name'] == ""){
 		$errmsg = "<div class='text text-danger'>You need to select an image file.</div>";
 	}
+	}
+	
 	$userobj = new User;
 	$userpic = $userobj->uploadPicture();
 }
@@ -39,7 +42,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 						<p>@ <?php echo $_SESSION['firstname']; ?></p>
 						<p><i class="fas fa-envelope mr-2" title="email verification"></i> <i class="fas fa-phone" title="phone verification"></i></p>
 						<p>member since <span><?php if(isset($userdetails['date_registered'])){echo date('jS, F Y', strtotime($userdetails['date_registered']));}?></span></p>
-						<p>0 recommendations</p>
 					</div>
 					<div class="col-md-6">
 						<?php 

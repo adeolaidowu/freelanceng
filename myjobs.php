@@ -19,7 +19,7 @@
 		<div class="container cont mt-2">
 			<div class="row">
 				<!-- searchbar for jobs -->
-				<div class="col-8 offset-1 mt-4">
+				<div class="col-md-8 offset-1 mt-4">
 					<form name="jobsearch" method="GET" action="#">
 						<label class="sr-only" for="inlineFormInputGroup">Find jobs</label>
 						<div class="input-group mb-2">
@@ -27,13 +27,10 @@
 								<div class="input-group-text"><i class="fa fa-search"></i></div>
 							</div>
 							<input type="text" class="form-control shadow-none" id="findmyjobs" placeholder="find jobs" name="findmyjobs">
+							<button type="submit" class="btn btn-outline-success ml-2 submit-search">Submit</button>
 						</div>
-					
+					</form>
 				</div>
-				<div class="col mt-4">
-					<button type="submit" class="btn btn-outline-success mr-1">Submit</button>
-				</div>
-				</form>
 			</div>
 			<form>
 				<div class="row form-group mb-4">

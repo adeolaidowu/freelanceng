@@ -17,7 +17,7 @@
 		<section class="profile">
 			<div class="container my-5">
 				<div class="row">
-					<div class="col-md-2 text-center jumbotron jumbotron-fluid bg-dark rounded text-white">
+					<div class="col-md-2 text-center">
 						<?php if(isset($userprofile)){echo $userprofile;} ?>
 						<?php 
 							if(empty($_SESSION['profilepic'])) {
@@ -34,7 +34,6 @@
 						<p>@ <?php echo $_SESSION['firstname']; ?></p>
 						<p><i class="fas fa-envelope mr-2" title="email verification"></i> <i class="fas fa-phone" title="phone verification"></i></p>
 						<p>member since <span><?php echo date('jS, F Y', strtotime($userdetails['date_registered']));?></span></p>
-						<p>0 recommendations</p>
 					</div>
 					<div class="col-md-6 offset-1">
 						<?php  

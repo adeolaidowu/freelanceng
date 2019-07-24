@@ -12,24 +12,24 @@
 							
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="images/img7.jpg" class="d-block w-100" alt="carouselimage" style="height: 500px;">
+									<img src="images/img7.jpg" class="d-block w-100 carousel-img" alt="carouselimage">
 									
-									<div class="carousel-caption d-md-block h-75">
-										<h1 style="font-size: 3em; color:#f5f7dc;">Hire Freelancers</h1>
-										<h2 style="color:#f5f7dc; font-size: 1.2em;">Get your work done by talented freelancers</h2>
+									<div class="carousel-caption d-md-block h-75 animated fadeInUp">
+										<h1>Hire Freelancers</h1>
+										<p>Get your work done by talented freelancers</p>
 									</div>
 								</div>
 								<div class="carousel-item">
-									<img src="images/img7.jpg" class="d-block w-100" alt="carouselimage" style="height: 500px;">
+									<img src="images/img7.jpg" class="d-block w-100 carousel-img" alt="carouselimage">
 									<div class="carousel-caption d-md-block h-75">
-										<h1 style="font-size: 3em; color:#f5f7dc;">Post your project for free</h1>
-										<h2 style="color:#f5f7dc; font-size: 1.2em;">Get the best talents to deliver for you</h2>
+										<h1>Post your project for free</h1>
+										<p>Get the best talents to deliver for you</p>
 									</div>
 								</div>
 							</div>
 
 						</div>
-						<div class="input-group mb-3 col-sm-6 mx-auto" style="position: relative; bottom:200px;z-index: 1;">
+						<div class="input-group mb-3 col-sm-6 mx-auto carousel-search" style="position: relative; bottom:200px;z-index: 1;">
 						  <input type="text" class="form-control w-50 mx-auto" placeholder="Search Jobs" aria-label="" aria-describedby="indexsearch" id="indexform" name="indexform">
 						  <div class="input-group-append">
 						    <a class="btn btn-success" type="submit" href="indexjobs.php">Search</a>
@@ -73,7 +73,7 @@
 		<section class="cta">
 			<h3>Let us help make your dream a reality</h3>
 			<p>Find freelancers with the skills your project requires</p>
-			<button type="button" class="btn btn-lg btn-dark"><a href="signup.php" style="color:#fff; text-decoration: none;">Get Started</a></button>
+			<a class="btn btn-lg btn-dark shadow-none" href="signup.php">Get Started</a>
 		</section>
 		<!-- Services -->
 		<div class="container">
@@ -117,66 +117,66 @@
 			</section>
 			<section class="categories">
 				<div class="row">
-					<div class="col">
+					<div class="col" id="categories">
 						<h2 style="font-size:2rem;">Browse Top Job Categories</h2>
 						<hr>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md col-sm-6 categories_list">
+					<div class="col-lg col-sm-6 categories_list">
 						<ul>
-							<li><a href="#">HTML</a></li>
-							<li><a href="#">CSS</a></li>
-							<li><a href="#">Photoshop</a></li>
-							<li><a href="#">Web Design</a></li>
-							<li><a href="#">Mobile App Development</a></li>
-							<li><a href="#">Desktop Application</a></li>
-							<li><a href="#">Javascript</a></li>
-							<li><a href="#">React.js</a></li>
-							<li><a href="#">OOP</a></li>
-							<li><a href="#">NoSQL</a></li>
+							<li><a href="" class="categories_link">HTML</a></li>
+							<li><a href="indexjobs.php?keyword=<?php echo "css"; ?>" class="categories_link">CSS</a></li>
+							<li><a href="indexjobs.php" class="categories_link">Photoshop</a></li>
+							<li><a href="#" class="categories_link">Web Design</a></li>
+							<li><a href="#" class="categories_link">Mobile App Development</a></li>
+							<li><a href="#" class="categories_link">Desktop Application</a></li>
+							<li><a href="#" class="categories_link">Javascript</a></li>
+							<li><a href="#" class="categories_link">React.js</a></li>
+							<li><a href="#" class="categories_link">OOP</a></li>
+							<li><a href="#" class="categories_link">NoSQL</a></li>
 						</ul>
 					</div>
-					<div class="col-md col-sm-6 categories_list">
+					<div class="col-lg col-sm-6 categories_list">
 						<ul>
-							<li><a href="#">Jquery</a></li>
-							<li><a href="#">React Native</a></li>
-							<li><a href="#">Python</a></li>
-							<li><a href="#">Logo Design</a></li>
-							<li><a href="#">Web Development</a></li>
-							<li><a href="#">Game Development</a></li>
-							<li><a href="#">PHP</a></li>
-							<li><a href="#">Flutter</a></li>
-							<li><a href="#">MongoDB</a></li>
-							<li><a href="#">Node.js</a></li>
+							<li><a href="#" class="categories_link">Jquery</a></li>
+							<li><a href="#" class="categories_link">React Native</a></li>
+							<li><a href="indexjobs.php?keyword=<?php echo "python"; ?>" class="categories_link">Python</a></li>
+							<li><a href="#" class="categories_link">Logo Design</a></li>
+							<li><a href="#" class="categories_link">Web Development</a></li>
+							<li><a href="#" class="categories_link">Game Development</a></li>
+							<li><a href="#" class="categories_link">PHP</a></li>
+							<li><a href="#" class="categories_link">Flutter</a></li>
+							<li><a href="#" class="categories_link">MongoDB</a></li>
+							<li><a href="#" class="categories_link">Node.js</a></li>
 						</ul>
 					</div>
-					<div class="col-md col-sm-6 categories_list">
+					<div class="col-lg col-sm-6 categories_list bottom-cat">
 						<ul>
-							<li><a href="#">C++ Programming</a></li>
-							<li><a href="#">HTML5</a></li>
-							<li><a href="#">Adobe Illustrator</a></li>
-							<li><a href="#">C# Programming</a></li>
-							<li><a href="#">Graphic Design</a></li>
-							<li><a href="#">Software Development</a></li>
-							<li><a href="#">MySQL</a></li>
-							<li><a href="#">SEO</a></li>
-							<li><a href="#">AWS</a></li>
-							<li><a href="#">Blockchain</a></li>
+							<li><a href="#" class="categories_link">C++ Programming</a></li>
+							<li><a href="#" class="categories_link">HTML5</a></li>
+							<li><a href="#" class="categories_link">Adobe Illustrator</a></li>
+							<li><a href="#" class="categories_link">C# Programming</a></li>
+							<li><a href="#" class="categories_link">Graphic Design</a></li>
+							<li><a href="#" class="categories_link">Software Development</a></li>
+							<li><a href="#" class="categories_link">MySQL</a></li>
+							<li><a href="#" class="categories_link">SEO</a></li>
+							<li><a href="#" class="categories_link">AWS</a></li>
+							<li><a href="#" class="categories_link">Blockchain</a></li>
 						</ul>
 					</div>
-					<div class="col-md col-sm-6 categories_list">
+					<div class="col-lg col-sm-6 categories_list bottom-cat">
 						<ul>
-							<li><a href="#">Wordpress</a></li>
-							<li><a href="#">Banner Design</a></li>
-							<li><a href="#">Heroku</a></li>
-							<li><a href="#">Ecommerce</a></li>
-							<li><a href="#">Java</a></li>
-							<li><a href="#">Android Apps</a></li>
-							<li><a href="#">Iphone Apps</a></li>
-							<li><a href="#">Angular.js</a></li>
-							<li><a href="#">NumPy</a></li>
-							<li><a href="#">R</a></li>
+							<li><a href="#" class="categories_link">Wordpress</a></li>
+							<li><a href="#" class="categories_link">Banner Design</a></li>
+							<li><a href="#" class="categories_link">Heroku</a></li>
+							<li><a href="#" class="categories_link">Ecommerce</a></li>
+							<li><a href="#" class="categories_link">Java</a></li>
+							<li><a href="#" class="categories_link">Android Apps</a></li>
+							<li><a href="#" class="categories_link">Iphone Apps</a></li>
+							<li><a href="#" class="categories_link">Angular.js</a></li>
+							<li><a href="#" class="categories_link">NumPy</a></li>
+							<li><a href="#" class="categories_link">R</a></li>
 						</ul>
 					</div>
 				</div>

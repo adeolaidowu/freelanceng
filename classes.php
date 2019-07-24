@@ -121,6 +121,7 @@ class User{
 
 	//create function to upload profile picture
 	public function uploadPicture(){
+			//check if global variable $_FILES has a value for error
 			if($_FILES['profilephoto']['error'] === 0){
 				// declare variables
 			$filename = $_FILES['profilephoto']['name'];
@@ -154,7 +155,7 @@ class User{
 
 			//to check if there is no error before uploading file
 			if(!empty($error)){
-				echo $error;
+				echo $error[0];
 			}else {
 				//otherwise, upload to destination folder
 				move_uploaded_file($filetempname, $destination);
@@ -620,6 +621,20 @@ class Job{
 			$row = "<div class='alert alert-success'>You have not applied to this job</div>";
 		}
 		return $row;
+	}
+	//method to get jobs via categories_list on index page
+	public function getCatJob($keyword){
+		$sql = "SELECT * FROM job3 WHERE projectname LIKE '%$keyword%' OR details LIKE '%$keyword%'";
+		//execute query
+		if($result = $this->dbobj->dbcon->query($sql)){
+			$row = $result->fetch_all(MYSQLI_ASSOC);
+			header("Location: http://localhost/freelanceng/indexjobs.php");
+		}else{
+			//echo "Error: ".$this->dbobj->dbcon->error;
+			echo "<div class='alert alert-danger'>No record found</div>";
+		}
+		return $row;
+
 	}
 }
 

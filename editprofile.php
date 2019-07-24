@@ -40,7 +40,6 @@
 						<p>@ <?php echo $_SESSION['firstname']; ?></p>
 						<p><i class="fas fa-envelope mr-2" title="email verification"></i> <i class="fas fa-phone" title="phone verification"></i></p>
 						<p>member since <span><?php echo date('jS, F Y', strtotime($userdetails['date_registered']));?></span></p>
-						<p>0 recommendations</p>
 					</div>
 					<div class="col-md-6 offset-1">
 						<?php 
@@ -53,11 +52,11 @@
 						<div class="edit">
 							<h5 class="profile_edit">Professional Headline <i class="fas fa-pencil-alt" style="font-size: 16px;"></i></h5>
 						<form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="prof_details">
-							<textarea placeholder="Enter your professional Headline" cols="50" rows="4" name="headline"><?php if(isset($prof['headline'])){echo $prof['headline'];} ?></textarea> <br>
+							<textarea placeholder="Enter your professional Headline" cols="50" rows="4" name="headline" class="form-control"><?php if(isset($prof['headline'])){echo $prof['headline'];} ?></textarea> <br>
 						
 						<h5 class="profile_edit">Profile summary <i class="fas fa-pencil-alt" style="font-size: 16px;"></i></h5>
 						
-							<textarea placeholder="Enter your profile summary" cols="50" rows="4" name="summary"><?php if(isset($prof['summary'])){echo $prof['summary'];} ?></textarea> <br>
+							<textarea placeholder="Enter your profile summary" cols="50" rows="4" name="summary" class="form-control"><?php if(isset($prof['summary'])){echo $prof['summary'];} ?></textarea> <br>
 							<input type="hidden" name="profid" value="<?php echo $prof['profile_id']; ?>">
 							<button class="btn btn-sm btn-success" id="editprof">Save Changes</button>
 						</form>

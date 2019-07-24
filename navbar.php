@@ -7,6 +7,7 @@
 		<!-- Bootstrap CSS -->
 		<link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
 		<link rel="stylesheet" type="text/css" href="fontawesome/css/all.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<style type="text/css">

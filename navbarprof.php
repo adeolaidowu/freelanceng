@@ -27,13 +27,9 @@ $userdetails = $userobj->getUserDetails($_SESSION['userid']);
 				<a class="navbar-brand offset-1" href="profile.php">Freelance<span class="logo">NG</span></a><button class="navbar-toggler"type="button"data-toggle="collapse"data-target="#navbarSupportedContent"aria-controls="navbarSupportedContent"aria-expanded="false"aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 						</button>
-						<div class="collapse navbar-collapse"id="navbarSupportedContent"><!-- 
-							
-							<form class="form-inline my-2 my-lg-0 ml-auto">
-								<input class="form-control mr-sm-2"type="search"placeholder="Search"aria-label="Search">
-							</form> -->
+						<div class="collapse navbar-collapse"id="navbarSupportedContent">
 							<!-- link to post project -->
-							<a class="btn btn-success ml-auto" href="jobdetails.php">
+							<a class="btn btn-success ml-auto post-project mr-2" href="jobdetails.php">
 								Post a Project
 							</a>
 							<ul class="navbar-nav">
